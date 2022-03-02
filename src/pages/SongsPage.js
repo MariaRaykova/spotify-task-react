@@ -9,10 +9,11 @@ import {
 } from "@chakra-ui/react";
 
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 
 export default function SongsPage() {
   const params = useParams();
+  const navigate = useNavigate();
   const artist_id = params.id;
 
   const [songs, setSongs] = useState(null);
@@ -40,6 +41,12 @@ export default function SongsPage() {
     <div className="albums">
       {" "}
       <div className="grid">
+        <Box h="30px">
+          <Link to={`/`}>Go back to main page</Link>
+        </Box>
+        <Box h="30px">
+          <Link to={`/albums/${artist_id}`}>Albums</Link>
+        </Box>
         <List spacing={3}>
           {songs?.map((song) => (
             <ListItem>

@@ -32,13 +32,13 @@ export default function App() {
   return (
     <div className="search">
       <div className="grid">
-        <Stack>
+        <Box h="30px">
           <Input
             value={value}
             onChange={handleChange}
             placeholder="Search artist..."
           />
-        </Stack>
+        </Box>
 
         {value
           ? artists?.map((artist) => (
@@ -56,10 +56,10 @@ export default function App() {
                   </Text>
                   <Text mt={2}>{artist.type}</Text>
 
-                  <Box h="20px">
+                  <Box h="30px">
                     <Link to={`/albums/${artist.id}`}>Albums</Link>
                   </Box>
-                  <Box h="20px">
+                  <Box h="30px">
                     <Link to={`/songs/${artist.id}`}>Songs</Link>
                   </Box>
                   <Flex mt={2} align="center">

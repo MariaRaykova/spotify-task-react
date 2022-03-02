@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { API_URL } from "../utils";
 import { Box, Center, Image } from "@chakra-ui/react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 export default function AlbumsPage() {
   const params = useParams();
@@ -31,8 +31,13 @@ export default function AlbumsPage() {
   }, []);
   return (
     <div className="albums">
-      {" "}
       <div className="grid">
+        <Box h="30px">
+          <Link to={`/`}>Go back to main page</Link>
+        </Box>
+        <Box h="30px">
+          <Link to={`/songs/${artist_id}`}>View All Songs</Link>
+        </Box>
         {albums?.map((album) => (
           <div>
             <Center h="100vh">
