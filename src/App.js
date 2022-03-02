@@ -1,6 +1,6 @@
 import "./styles.css";
 import { useEffect } from "react";
-import SearchPage from "./pages/SearchPage";
+
 import { getSpotifyToken } from "./services";
 export default function App(props) {
   useEffect(() => {
@@ -8,7 +8,7 @@ export default function App(props) {
   }, []);
   return (
     <div className="App">
-      <h1>Spotify</h1>
+      <h1>Spotify Task</h1>
       <div id="app">{props.children}</div>
     </div>
   );

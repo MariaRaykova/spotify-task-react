@@ -8,7 +8,7 @@ export default function App() {
   const [artists, setArtists] = useState(null);
   const token = localStorage.getItem("spotify_token");
   const [value, setValue] = useState(null);
-  console.log(value);
+
   const handleChange = (event) => {
     setValue(event.target.value);
     searchArtist();

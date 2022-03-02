@@ -19,7 +19,6 @@ export default function AlbumsPage() {
         }
       })
       .then((res) => {
-        console.log(JSON.stringify(res.items));
         setAlbums(res.data.items);
         return res;
       })

@@ -26,7 +26,6 @@ export default function SongsPage() {
         }
       })
       .then((res) => {
-        console.log(JSON.stringify(res.data.tracks));
         setSongs(res.data.tracks);
         return res;
       })
